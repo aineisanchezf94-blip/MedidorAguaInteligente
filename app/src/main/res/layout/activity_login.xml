@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1424"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Header / Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="#3DDEB3"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="HydroGuard Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HydroGuard"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Autenticación Segura de Usuario IoT"
+                android:textColor="#8A99AD"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Tarjeta de Formulario de Inicio de Sesión -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#162035"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INGRESO AL SISTEMA"
+                    android:textColor="#3DDEB3"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Campo Correo Electrónico -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo Electrónico"
+                    android:textColorHint="#56667D"
+                    app:hintTextColor="#3DDEB3"
+                    app:boxStrokeColor="#3DDEB3"
+                    app:errorEnabled="true"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:inputType="textEmailAddress"
+                        android:text="usuario@hydroguard.io" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Contraseña -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:textColorHint="#56667D"
+                    app:hintTextColor="#3DDEB3"
+                    app:boxStrokeColor="#3DDEB3"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#8A99AD"
+                    app:errorEnabled="true"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:inputType="textPassword"
+                        android:text="Hydro2026*" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Token ID de Medidor -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMeterToken"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Token ID de Medidor Vinculado"
+                    android:textColorHint="#56667D"
+                    app:hintTextColor="#3DDEB3"
+                    app:boxStrokeColor="#3DDEB3"
+                    app:errorEnabled="true"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMeterToken"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:inputType="textCapCharacters"
+                        android:text="MTR-8842-IOT" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botón de Inicio de Sesión -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="🔓 Iniciar Sesión Segura"
+                    android:textColor="#0D1424"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#3DDEB3"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Pie Informativo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Protegido bajo estándar ISO/IEC 27001 &amp; OWASP MASVS"
+            android:textColor="#56667D"
+            android:textSize="11sp"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>

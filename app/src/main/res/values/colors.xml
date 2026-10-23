@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- HydroGuard Custom Color Palette -->
+    <color name="bg_dark">#0D1424</color>
+    <color name="card_bg">#162035</color>
+    <color name="card_bg_elevated">#1D2A4A</color>
+    <color name="accent_teal">#3DDEB3</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8A99AD</color>
+    <color name="text_hint">#56667D</color>
+    <color name="alert_red">#FF5252</color>
+    <color name="alert_orange">#FF9800</color>
+    <color name="alert_green">#4CAF50</color>
+</resources>
